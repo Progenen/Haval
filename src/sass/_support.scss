@@ -58,9 +58,20 @@ $color1: #ff0000;
 
 
 // Fonts
-// @include font-face('Example', '../fonts/Example/Example-Bold', 700, normal, ttf);
+@include font-face('Haval', '../fonts/Haval/Haval-Regular', 400, normal, ttf);
+@include font-face('Haval', '../fonts/Haval/Haval-Medium', 500, normal, ttf);
 
 // Vars
+:root {
+	--color-blue: #4DCDCD;
+	--color-gray: #B2AAAA;
+	--text-size: 16px;
+	--text-size-big: 24px;
+	--gap-1: 20px;
+	--title-size-main: 32px;
+	--title-size-medium: 28px;
+	--title-size-sm: 20px;
+}
 
 // Путь к спрайту для конкатенации
 $sprite: "../svg/dest/stack/sprite.svg#";
@@ -75,4 +86,11 @@ $sprite: "../svg/dest/stack/sprite.svg#";
 	&:focus {
 		outline: none;
 	}
+}
+
+@mixin hidden {
+	position: absolute;
+	right: -1000%;
+	visibility: hidden;
+	opacity: 0;
 }

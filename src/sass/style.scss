@@ -1,7 +1,7 @@
 
 
 // Libs
-@import "libs/itc-slider.css";
+@import "libs/slick.css";
 @import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
 
 // Main
@@ -9,5 +9,6 @@
 @import "all";
 @import "script-classes";
 @import "header";
+@import "pages/home-page";
 @import "footer";
 @import "media";

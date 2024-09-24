@@ -1,6 +1,6 @@
 const { src, dest, watch, series, parallel, tree } = require('gulp');
 const browserSync = require('browser-sync');
-const sass = require('gulp-sass')(require('sass'));                                
+const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const sprite = require('gulp-svg-sprite');
@@ -66,23 +66,13 @@ function html() {
 // }
 
 function scripts() {
-    return src('src/js/*/**.js')
-        .pipe(webpack({
-            mode: isDevelopment ? 'development' : 'production',
-            entry: './src/js/index.js',
-            output: {
-                filename: 'bundle.js'
-            },
-            module: {
-                rules: [
-                    {
-                        test: /\.css$/,
-                        use: ['style-loader', 'css-loader'], 
-                    }
-                ],
-            },
-        }))
-        .pipe(dest(dir + '/JS/'))
+    return src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'src/JS/libs/**.js',
+        'src/JS/index.js'
+    ])
+    .pipe(concat('bundle.js'))
+    .pipe(dest(dir + '/JS/'))
 }
 
 // Наблюдаем за всеми изменениями (gulp-watch) | Watch all changes (gulp-watch)
@@ -92,11 +82,9 @@ function startWatch() {
     watch(['src/**/*.html'], html);
     watch(['src/**/*.html']).on('change', browserSync.reload);
     watch(['src/images/**/*'], images);
-    watch(['src/svg/src/mono/*'], svgspriteMono);
-    watch(['src/svg/src/multi/*'], svgspriteMulti);
+    watch(['src/svg/stack/mono/*'], svgspriteMono);
+    watch(['src/svg/stack/multi/*'], svgspriteMulti);
     watch(['src/fonts/**/*'], fonts);
-    watch(['src/svg/src/mono/*'], svgspriteMono);
-    watch(['src/svg/src/multi/*'], svgspriteMulti);
 }
 
 
@@ -131,7 +119,7 @@ function svgspriteMono() {
                 transform: [{
                     "svgo": {
                         "plugins": [
-                            { removeAttrs: { attrs: ['class', 'data-name', 'fill', 'stroke', 'color'] }}
+                            { removeAttrs: { attrs: ['class', 'data-name', 'fill', 'stroke', 'color'] } }
                         ]
                     }
                 }]
