@@ -113,4 +113,58 @@
 
     &__btn {
     }
+
+    &__dominations {
+        margin-top: 60px;
+    }
+
+    &__dominations-items {
+        row-gap: 10px;
+    }
+
+    &__dominations-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__dominations-item-inner {
+        border: 1px solid #000;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        width: 100%;
+        padding-left: 45px;
+        padding-right: 25px;
+    }
+
+    &__dominations-item-icon {
+        position: relative;
+        img {
+            width: 44px;
+            height: 44px;
+            position: relative;
+            z-index: 2;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            height: 100vw;
+            width: 71px;
+            left: -14px;
+            top: -50vw;
+            z-index: 0;
+        }
+    }
+
+    &__dominations-item-title {
+        margin: 0;
+        font-weight: 400;
+        font-size: var(--text-size);
+        max-width: 320px;
+        width: 100%;
+    }
 }

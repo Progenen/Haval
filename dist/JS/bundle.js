@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (document.querySelector(".offer")) {
         
-        $(".offer__slider").slick({
+        $(".offer__slider-container").slick({
             dots: true,
             appendArrows: $(".offer__slider-arrows-place"),
             prevArrow: `<button type="button" class="offer__slider-arrow offer__slider-arrow--prev slick-prev"> 
