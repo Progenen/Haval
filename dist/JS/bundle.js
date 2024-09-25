@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const menu = document.querySelector(".header__bottom");
         const header = document.querySelector("header");
         const bgMd = document.querySelectorAll('[data-bg-md]');
+        const srcMd = document.querySelectorAll('[data-src-md]');
 
         menu.style.paddingTop = header.clientHeight + "px";
 
@@ -21,7 +22,20 @@ document.addEventListener('DOMContentLoaded', function () {
         bgMd.forEach(item => {
             console.log(item.getAttribute("data-bg-md"));
             item.style.backgroundImage = `url(${item.getAttribute("data-bg-md")})`;
-        })
+        });
+
+        srcMd.forEach(item => {
+            item.setAttribute("src", item.getAttribute("data-src-md"));
+        });
+    }
+
+    if (window.innerWidth <= 768) {
+        const srcSm = document.querySelectorAll("[data-src-sm]")
+
+        srcSm.forEach(item => {
+            item.setAttribute("src", item.getAttribute("data-src-sm"));
+        });
+        
     }
 
     if (document.querySelector(".offer")) {
