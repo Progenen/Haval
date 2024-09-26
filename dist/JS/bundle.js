@@ -50,4 +50,36 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
     }
+
+    if (document.querySelector(".promotion")) {
+        $(".promotion__slider").slick({
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: false,
+            appendArrows: $(".promotion__arrows"),
+            prevArrow: `<button type="button" class="promotion__slider-arrow promotion__slider-arrow--prev slick-prev"> 
+                        <svg>  <use xlink:href='svg/dest/stack/spriteMulti.svg#arrowLeft'></use> </svg> </button>`,
+            nextArrow: `<button type="button" class="promotion__slider-arrow promotion__slider-arrow--next slick-next"> 
+                        <svg>  <use xlink:href='svg/dest/stack/spriteMulti.svg#arrowLeft'></use> </svg> </button>`,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        variableWidth: true,
+                    }
+                }
+            ]
+        })
+    }
 });

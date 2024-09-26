@@ -288,6 +288,26 @@
             margin-top: 40px;
         }
     } 
+
+    // promotions 992
+    .promotion {
+        &__slider {
+            margin: 40px -5px 0
+        }
+
+        &__item {
+            margin: 0 5px;
+            padding: 10px 10px 20px;
+        }
+
+        .slick-dots {
+            margin-top: 30px;
+        }
+
+        &__btn {
+            margin-top: 40px;
+        }
+    }
 }
 
 @media (max-width: 876px) {
@@ -298,6 +318,12 @@
     // main-title 768
     .main-title {
         margin-bottom: 40px;
+    }
+
+    // btn 768
+    .btn {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     // header 768
@@ -474,6 +500,40 @@
         }
         &__btn {
             margin-bottom: 10px;
+        }
+    }
+
+    // promotion 992
+    .promotion {
+        &__slider {
+            margin: 30px -12px 0;
+        }
+
+        &__item {
+            padding: 0;
+            width: 310px;
+        }
+
+        &__item-body {
+            padding: 0 10px 20px;
+        }
+
+        &__item-btn {
+            white-space: nowrap;
+        }
+
+        .slick-dots {
+            margin-top: 20px;
+        }
+
+        &__slider-arrow {
+            width: 36px;
+            height: 36px;
+
+            svg {
+                width: 21px;
+                height: 21px;
+            }
         }
     }
 }
