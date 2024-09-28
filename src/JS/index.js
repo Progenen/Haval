@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
         srcSm.forEach(item => {
             item.setAttribute("src", item.getAttribute("data-src-sm"));
         });
-        
+
     }
 
     if (document.querySelector(".offer")) {
-        
+
         $(".offer__slider-container").slick({
             dots: true,
             appendArrows: $(".offer__slider-arrows-place"),
@@ -77,4 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         })
     }
+
+    $('.footer__spoiler-content').css({ 'display': 'none' });
+    $('.footer__spoiler-title').click(function () {
+        $('.footer__spoiler-title').toggleClass("active");
+        $(this).next('.footer__spoiler-content').slideToggle(300)
+    });
+
 });
