@@ -102,7 +102,9 @@
         margin-top: 60px;
         row-gap: 40px;
     }
-
+    h2 {
+        margin-bottom: 0;
+    }
     &__table {
         width: 100%;
         max-width: 700px;

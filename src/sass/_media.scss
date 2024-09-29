@@ -238,7 +238,7 @@
         }
 
         &__btn {
-            &:first-child {
+            &--big {
                 max-width: 48.5%;
                 margin-right: 5px;
             }
@@ -506,8 +506,9 @@
 
         &__btn {
             white-space: nowrap;
-            &:first-child {
+            &--big {
                 max-width: 100%;
+                margin-right: 0;
             }
             max-width: 100%;
             width: 100%;
@@ -648,6 +649,13 @@
         }
     }
 
+    // descr-block 768
+    .descr-block {
+        h2 {
+            text-align: left;
+        }
+    }
+
     // text 768
     .text {
         p + ul {
@@ -668,6 +676,11 @@
 
     // characters 768
     .characters {
+
+        .descr-block h2 {
+            text-align: center;
+        }
+
         .descr-block p {
             display: none;
         }
