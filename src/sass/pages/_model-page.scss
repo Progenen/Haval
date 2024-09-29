@@ -37,7 +37,7 @@
     }
 }
 
-.review {
+.descr-block {
     h2 {
         text-align: center;
         margin-bottom: 20px;
@@ -57,7 +57,6 @@
 }
 
 .spoilers {
-
     &__items {
     }
 
@@ -79,12 +78,12 @@
         svg {
             width: 18px;
             height: 11px;
-            stroke: #4DCDCD;
+            stroke: #4dcdcd;
             fill: none;
-            transition: .3s;
+            transition: 0.3s;
         }
 
-        &.active svg{
+        &.active svg {
             transform: rotate(180deg);
         }
     }
@@ -93,6 +92,46 @@
         margin-top: 40px;
         ul {
             margin-top: 0;
+        }
+    }
+}
+
+.characters {
+
+    &__tables {
+        margin-top: 60px;
+        row-gap: 40px;
+    }
+
+    &__table {
+        width: 100%;
+        max-width: 700px;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 18px;
+
+        th,
+        td {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        td {
+            font-size: 14px;
+            padding: 25px 0;
+            width: 50%;
+        }
+
+        th {
+            padding-bottom: 25px;
+            padding-left: 0;
+            text-align: left;
+            font-size: var(--title-size-sm);
+        }
+
+        td:nth-child(2) {
+            text-align: right;
+            font-size: 16px;
         }
     }
 }

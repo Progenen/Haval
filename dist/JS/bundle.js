@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $('[data-spoiler-content]').css({ 'display': 'none' });
     $('[data-spoiler-title]').click(function () {
         $('[data-spoiler-title]').toggleClass("active");
-        $(this).next('[data-spoiler-content]').slideToggle(300)
+        $(this).next().slideToggle(300)
     });
 
 });
