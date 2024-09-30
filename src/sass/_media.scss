@@ -238,13 +238,13 @@
         }
 
         &__btn {
+            max-width: 48.5%;
+            width: 100%;
+            text-align: center;
             &--big {
                 max-width: 48.5%;
                 margin-right: 5px;
             }
-            max-width: 48.5%;
-            width: 100%;
-            text-align: center;
         }
     }
 
@@ -506,12 +506,12 @@
 
         &__btn {
             white-space: nowrap;
+            max-width: 100%;
+            width: 100%;
             &--big {
                 max-width: 100%;
                 margin-right: 0;
             }
-            max-width: 100%;
-            width: 100%;
         }
     }
 
@@ -678,7 +678,7 @@
     .characters {
 
         .descr-block h2 {
-            text-align: center;
+            text-align: center ;
         }
 
         .descr-block p {
