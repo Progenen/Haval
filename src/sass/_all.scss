@@ -69,6 +69,32 @@ footer {
 
         }
     }
+
+    &--link {
+        background: transparent;
+        text-decoration: underline;
+        border: none;
+        font-size: var(--text-size);
+        text-transform: none;
+    }
+
+    &--border {
+        &:hover {
+            color: #fff;
+            background-color: #000;
+            background-color: var(--color-blue);
+            border-color: var(--color-blue);
+        }
+    }
+
+    &--black {
+        background-color: #000;
+        color: #fff;
+        &:hover {
+            background-color: var(--color-blue);
+            border-color: var(--color-blue);
+        }
+    }
 }
 
 section {
@@ -123,6 +149,7 @@ section {
         font-style: normal;
         gap: 10px;
         text-decoration: none;
+        font-weight: 400;
         color: #000;
     }
 
@@ -132,6 +159,7 @@ section {
     }
 
     &__list-item-text {
+        font-weight: 400;
     }
 
     &__list-time {
