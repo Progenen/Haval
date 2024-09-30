@@ -474,6 +474,10 @@
             margin-bottom: 0;
             font-weight: 400;
             text-decoration: underline;
+            transition: .3s;
+            &:hover {
+                color: var(--color-blue);
+            }
         }
     }
 
