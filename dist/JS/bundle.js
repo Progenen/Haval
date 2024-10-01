@@ -84,8 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     $('[data-spoiler-content]').css({ 'display': 'none' });
+
     $('[data-spoiler-title]').click(function () {
-        $('[data-spoiler-title]').toggleClass("active");
+        $(this).toggleClass("active");
         $(this).next().slideToggle(300)
     });
 

@@ -447,6 +447,9 @@
         padding: 20px 20px 30px;
         border: 1px solid #ddd;
         position: relative;
+        &:hover h3{
+            color: var(--color-blue);
+        }
 
         h3 {
             margin-top: 20px;
@@ -454,9 +457,6 @@
             font-weight: 400;
             text-decoration: underline;
             transition: .3s;
-            &:hover {
-                color: var(--color-blue);
-            }
         }
     }
 
